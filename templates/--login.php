@@ -1,0 +1,67 @@
+<?php if(!isset($caller)){exit('Direct access not allowed.');} ?><!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title><?php echo $page_data[11]; ?></title> 
+    <?php include 'code/modules/head.php'; ?> 
+  </head>
+  <body>  
+    <!-- Header Section Start -->
+    <?php include 'code/modules/header.php'; ?> 
+    <!-- Header Section End -->
+    <!-- Page Header Start -->
+    <?php include 'code/modules/titlebanner.php'; ?> 
+    <!-- Page Header End --> 
+
+    <!-- Content section Start --> 
+    <section id="content">
+      <div class="container">
+        <div class="row login-main">
+          <div class="col-sm-6 col-sm-offset-4 col-md-4 col-md-offset-4">
+            <div class="page-login-form box">
+              <h3>
+                Login
+              </h3>
+              <form role="form" method="post" class="login-form" action="code/includes/login.php">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-user"></i>
+                    <input type="text" id="sender-email" class="form-control" name="u" placeholder="Username">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-unlock-alt"></i>
+                    <input type="password" class="form-control" name="p" placeholder="Password">
+                  </div>
+                </div>                  
+                <div class="checkbox">
+                  <input type="checkbox" id="remember" name="rememberme" value="forever" style="float: left;">
+                  <label for="remember">Remember me</label>
+                </div>
+                <button class="btn btn-common log-btn">Submit</button>
+				<a href="auth-facebook" class="btn btn-common log-btn facebook" alt="Sign in with Facebook" title="Sign in with Facebook"><i class="fa fa-facebook"></i> Login With Facebook</a>
+              </form>
+              <ul class="form-links">
+                <li class="pull-left"><a href="/register">Don't have an account?</a></li>
+                <li class="pull-right"><a href="/forgot-password">Lost your password?</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content section End --> 
+    
+    <!-- Footer Section Start -->
+    <footer>
+    	<!-- Footer Area Start -->
+    	<?php include 'code/modules/footer.php'; ?>
+    	<!-- Footer area End -->
+    	<!-- Copyright-social Start  -->
+    	<?php include 'code/modules/social.php'; ?>
+    	<!-- Copyright End -->
+    </footer>
+    <!-- Footer Section End -->  
+	<?php include 'code/modules/footerjs.php'; ?>
+  </body>
+</html>
